@@ -1,32 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Adoption Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            background: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkred;
+        }
+    </style>
 </head>
 <body>
-  <form>
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Name" >
-    </br>
-    <label for="phone">Phone</label>
-    <input type="tel" id="phone" placeholder="Phone Number" >
-    </br>
-    <label for="address">Address</label>
-    <input type="text" id="address" placeholder="Address">
-    <h4>Have you ever lived with a Dog before?</h4>
-    <label for="checkbox1">Yes</label>
-    <input type="radio" id="checkbox1" name="dog" value="yes">
-    <label for="checkbox2">No</label>
-    <input type="radio" id="checkbox2" name="dog" value="yes">
-    <h4>Please select your preferred breeds</h4>
-    <select id="multiSelect" multiple>
-      <option>American Dog</option>
-      <option>Bull Dog</option>
-      <option>Labrador Dog</option>
-    </select>
-    </br>  
-    <input type="submit" id="submit" value="Submit">
-  </form>
-  <script type="text/javascript" src="./script.js"></script>
+
+    <div class="container">
+        <h2>Dog Adoption Application</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+
+            <label for="checkbox">Have you ever lived with a Dog before?</label>
+            <input type="checkbox" id="checkbox" name="checkbox" value="Have you ever lived with a Dog before?">
+
+            <label for="multiSelect">Please select your preferred breeds:</label>
+            <select id="multiSelect" name="multiSelect[]" multiple required>
+                <option value="Labrador">Labrador</option>
+                <option value="German Shepherd">German Shepherd</option>
+                <option value="Golden Retriever">Golden Retriever</option>
+                <option value="Beagle">Beagle</option>
+                <option value="Bulldog">Bulldog</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
 </body>
 </html>
